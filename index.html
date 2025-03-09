@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zastriya Associates - Expert Legal Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+    
+            padding: 1rem 0;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        header nav ul li {
+            margin-left: 1rem;
+        }
+        header nav ul li a {
+            color: rgb(13, 12, 12);
+            text-decoration: none;
+        }
+        .hero {
+            background-color: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+            background-image: url(https://blog.ipleaders.in/wp-content/uploads/2020/04/default-lawyers-5.jpg);
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+            background-blend-mode:soft-light;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #3182ce;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.25rem;
+        }
+        .services {
+            background-color: #f7fafc;
+            padding: 4rem 0;
+        }
+        .services h2, .about h2, .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .service-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .about {
+            padding: 4rem 0;
+        }
+        .about p {
+            max-width: 800px;
+            margin: 0 auto 1rem;
+            text-align: center;
+        }
+        .contact {
+            background-color: #f7fafc;
+            padding: 4rem 0;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.25rem;
+        }
+        footer {
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            header nav {
+                margin-top: 1rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center"> <!-- Flex container to align items -->
+            <!-- Left Side: Logo and text -->
+            <div class="flex flex-col items-start">
+                <big><a href="#" class="text-2xl font-bold text-gray-800">Zastriya Associates</a></big>
+               
+            </div>
+
+            <!-- Right Side: Desktop Navigation Menu -->
+            <nav class="hidden md:block">
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="text-gray-700 hover:text-blue-600">Home</a></li>
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600">About</a></li>
+                    <li><a href="gallery.html" class="text-gray-700 hover:text-blue-600">Gallery</a></li>
+                    <li><a href="#services" class="text-gray-700 hover:text-blue-600">Services</a></li>
+                    <li><a href="#work" class="text-gray-700 hover:text-blue-600">Work</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Navigation Toggle Button -->
+            <button id="menu-toggle" class="md:hidden mt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4">
+            <ul class="flex flex-col space-y-4 bg-white shadow-md">
+                <li><a href="#home" class="block py-2 px-4 text-gray-700 hover:text-blue-600">Home</a></li>
+                <li><a href="#about" class="block py-2 px-4 text-gray-700 hover:text-blue-600">About</a></li>
+                <li><a href="#services" class="block py-2 px-4 text-gray-700 hover:text-blue-600">Services</a></li>
+                <li><a href="#work" class="block py-2 px-4 text-gray-700 hover:text-blue-600">Work</a></li>
+                <li><a href="#contact" class="block py-2 px-4 text-gray-700 hover:text-blue-600">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- JavaScript for mobile menu toggle functionality -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+
+            <section id="home" class="bg-gray-900 text-white py-20 md:py-32 mt-16">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Expert Legal Solutions</h1>
+                    <p class="text-xl md:text-2xl mb-8">Protecting Your Rights, Securing Your Future</p>
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        Get Consultation
+                    </a><br><br>
+                    <p> with</p>
+                    <p class="text-white-700">Vinay S.Basavakumar</p>
+                    <h6 class="text-white-600">BAL, LLB</h6>
+                </div>
+            </section>
+
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8">About Zastriya Associates</h2>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="mb-4">
+                        Zastriya Associates is a leading law firm committed to providing exceptional legal services to our clients. 
+                        With years of experience and a team of dedicated professionals, we strive to deliver the best possible outcomes 
+                        for every case we handle.
+                    </p>
+                    <p>
+                        Our firm specializes in various areas of law, including civil litigation, criminal defense, corporate law, 
+                        and family law. We pride ourselves on our attention to detail, personalized approach, and unwavering commitment 
+                        to our clients' interests.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md transform-gpu hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Civil Litigation</h3>
+                        <p class="text-gray-600">Representing clients in various civil disputes</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform-gpu hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Criminal Defense</h3>
+                        <p class="text-gray-600">Protecting your rights in criminal proceedings</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform-gpu hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Family Law</h3>
+                        <p class="text-gray-600">Handling divorce, custody, and other family matters</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transform-gpu hover:scale-105 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                        </svg>
+                        <h3 class="text-xl font-semibold mb-2">Corporate Law</h3>
+                        <p class="text-gray-600">Assisting businesses with legal matters and compliance</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="work" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Work</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="merger.html" class="block transform-gpu hover:scale-105 transition-transform duration-300">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img src="merge.jpg" alt="Corporate Merger" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold mb-2">Corporate Merger</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="intel.html" class="block transform-gpu hover:scale-105 transition-transform duration-300">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img src="intel.jpg" alt="Intellectual Property" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold mb-2">Intellectual Property</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="family.html" class="block transform-gpu hover:scale-105 transition-transform duration-300">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img src="family.jpg" alt="Family Dispute" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold mb-2">Family Dispute</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="criminal.html" class="block transform-gpu hover:scale-105 transition-transform duration-300">
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                            <img src="criminal.jpg" alt="Criminal Defense" class="w-full h-48 object-cover">
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold mb-2">Criminal Defense</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Zastriya Associates</h2>
+            <p class="mb-4">
+                📍 <a href="https://www.google.com/maps/place/Zastriya+Associates+-+Advocate+%26+Solicitor/@12.5971162,75.8455659,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba505d3e5353d13:0xac2030129d8b151e!8m2!3d12.5971162!4d75.8481408!16s%2Fg%2F11hjczx4j5?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" 
+                    class="text-blue-600 hover:underline" 
+                    target="_blank">
+                    1st Floor, Rama Complex Club Road, Somwarpet
+                </a>
+            </p>
+            
+            <p class="mb-4">
+                📞 <a href="tel:+917259336333" class="text-blue-600 hover:underline">+91 7259336333</a> / 
+                <a href="tel:+919611552661" class="text-blue-600 hover:underline">+91 9611552661</a>
+            </p>
+            
+            <p class="mb-4">
+                📧 <a href="mailto:zastriya.associates@gmail.com" class="text-blue-600 hover:underline">zastriya.associates@gmail.com</a>
+            </p>
+            <p class="text-sm">&copy; 2023 Zastriya Associates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
